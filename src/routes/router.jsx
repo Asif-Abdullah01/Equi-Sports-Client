@@ -12,6 +12,7 @@ import ForgetPass from "../components/ForgetPass";
 import AllSportsEquipments from "../components/pages/AllSportsEquipments";
 import AddEquipment from "../components/pages/AddEquipment";
 import MyEquipments from "../components/pages/MyEquipments";
+import ViewDetails from "../components/ViewDetails";
 
 const router = createBrowserRouter([
     {
@@ -25,7 +26,8 @@ const router = createBrowserRouter([
             },
             {
                 path: '/allSports',
-                element: <AllSportsEquipments></AllSportsEquipments>
+                element: <AllSportsEquipments></AllSportsEquipments>,
+                loader: () => fetch('http://localhost:5000/equipments')
             },
             {
                 path: '/addEquipment',
@@ -46,6 +48,10 @@ const router = createBrowserRouter([
             {
                 path: '/forgetPass',
                 element: <ForgetPass></ForgetPass>
+            },
+            {
+                path: '/details',
+                element: <ViewDetails></ViewDetails>
             },
         ]
     },
