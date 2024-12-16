@@ -1,0 +1,10 @@
+.menu a {
+    padding: 6px;
+    transition: all 0.3s ease;
+}
+
+.active{
+    color: rgb(255, 255, 255);
+    background-color: rgba(25, 151, 0, 0.877);
+    border-radius: 5px;
+}
