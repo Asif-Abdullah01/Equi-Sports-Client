@@ -12,7 +12,7 @@ const Footer = () => {
                         <br />
                         Providing reliable guidance since 2009
                     </p>
-                    <p className='font-bold'>Cellphone: 01606071234</p>
+                    <p className='font-bold'>Cellphone: 01606071434</p>
 
                     <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
                 </aside>
