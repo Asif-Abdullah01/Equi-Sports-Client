@@ -50,8 +50,9 @@ const router = createBrowserRouter([
                 element: <ForgetPass></ForgetPass>
             },
             {
-                path: '/details',
-                element: <ViewDetails></ViewDetails>
+                path: '/details/:id',
+                element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
+                loader: ({params}) => fetch(`http://localhost:5000/equipments/${params.id}`)
             },
         ]
     },

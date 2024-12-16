@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const AllEquipmentTable = ({idx,equipment,allEquipments,setAllEquipments}) => {
-    const {name ,category, price,stock,photo} = equipment;
+    const {_id, name ,category, price,stock,photo} = equipment;
 
     return (
         <>
@@ -15,7 +15,7 @@ const AllEquipmentTable = ({idx,equipment,allEquipments,setAllEquipments}) => {
           <td>{stock}</td>
           <td>
           <button className='btn btn-success'>
-                <Link to={'/details'}>View Details</Link>
+                <Link to={`/details/${_id}`}>View Details</Link>
             </button>
           </td>
         </tr>
