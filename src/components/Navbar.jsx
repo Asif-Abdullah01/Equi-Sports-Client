@@ -1,12 +1,13 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import './active.css'
+import './active.css';
 import { AuthContext } from './../Provider/AuthProvider';
+import ThemeToggler from './ThemeToggler';
+
 
 const Navbar = () => {
 
-    const { user, LogOut } = useContext(AuthContext)
-    // console.log(user);
+    const { user, LogOut } = useContext(AuthContext);
 
     return (
         <div className="navbar bg-[#8fff93] py-4 sticky top-0 z-50 px-2 md:px-8">
@@ -45,7 +46,11 @@ const Navbar = () => {
                     <NavLink to={'/myEquipments'}>My Equipment List</NavLink>
                 </ul>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end flex items-center gap-4">
+                {/* Add the ThemeToggler component */}
+                <ThemeToggler />
+
+                {/* User or Auth Buttons */}
                 {
                     user && user.email ?
                         <div className='flex justify-center items-center gap-4'>
@@ -53,12 +58,12 @@ const Navbar = () => {
                                 <img className='w-12 h-12 rounded-full object-cover transition-opacity duration-300 group-hover:opacity-0' src={user.photoURL} alt="photo" />
                                 <h2 className='text-center absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>{user.displayName}</h2>
                             </div>
-                            <button onClick={LogOut} className='py-2 px-3 border-2 border-slate-500 rounded-md cursor-pointer text-white bg-green-600 hover:bg-green-800 transition-all duration-300 ease-in-out'>LogOut</button>
+                            <button onClick={LogOut} className='py-2 px-3 border-2 border-green-800 rounded-md cursor-pointer text-white bg-green-600 hover:bg-green-800 transition-all duration-300 ease-in-out'>LogOut</button>
                         </div>
                         :
                         <div className='flex gap-3'>
-                            <Link to="/login" className="py-2 px-3 border-2 border-slate-500 rounded-md cursor-pointer text-white bg-green-600 hover:bg-green-800 transition-all duration-300 ease-in-out">Login</Link>
-                            <Link to="/register" className="py-2 px-3 border-2 border-slate-500 rounded-md cursor-pointer text-white bg-green-600 hover:bg-green-800 transition-all duration-300 ease-in-out">Register</Link>
+                            <Link to="/login" className="py-2 px-3 border-2 border-green-800 rounded-md cursor-pointer text-white bg-green-600 hover:bg-green-800 transition-all duration-300 ease-in-out">Login</Link>
+                            <Link to="/register" className="py-2 px-3 border-2 border-green-800 rounded-md cursor-pointer text-white bg-green-600 hover:bg-green-800 transition-all duration-300 ease-in-out">Register</Link>
                         </div>
                 }
             </div>
