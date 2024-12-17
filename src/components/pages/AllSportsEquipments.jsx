@@ -9,7 +9,7 @@ const AllSportsEquipments = () => {
 
     return (
        <>
-       <p>data : {allEquipments.length}</p>
+       {/* <p>data : {allEquipments.length}</p> */}
 
        <div className="w-9/12 mx-auto bg-green-100 text-black">
         <div className="overflow-x-auto">

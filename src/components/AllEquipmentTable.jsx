@@ -15,7 +15,7 @@ const AllEquipmentTable = ({idx,equipment,allEquipments,setAllEquipments}) => {
           <td>{stock}</td>
           <td>
           <button className='btn btn-success'>
-                <Link to={`/details/${_id}`}>View Details</Link>
+                <Link className='text-white' to={`/details/${_id}`}>View Details</Link>
             </button>
           </td>
         </tr>
