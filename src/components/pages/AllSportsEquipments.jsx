@@ -3,21 +3,36 @@ import { useLoaderData } from "react-router-dom";
 import AllEquipmentTable from "../AllEquipmentTable";
 
 const AllSportsEquipments = () => {
+  const data = useLoaderData();
+  const [allEquipments, setAllEquipments] = useState(data);
+  const [sortOrder, setSortOrder] = useState("asc");
 
-    const data = useLoaderData();
-    const [allEquipments,setAllEquipments] = useState(data)
+  const handleSort = () => {
+    const sortedEquipments = [...allEquipments].sort((a, b) => {
+      return sortOrder === "asc" ? a.price - b.price : b.price - a.price;
+    });
+    setAllEquipments(sortedEquipments);
+    setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+  };
 
-    return (
-       <>
-       {/* <p>data : {allEquipments.length}</p> */}
-
-       <div className="w-9/12 mx-auto bg-green-100 text-black">
+  return (
+    <>
+      <div className="w-9/12 mx-auto bg-green-100 text-black">
+        <div className="flex justify-between items-center my-4">
+          <h2 className="text-2xl font-bold">All Sports Equipments</h2>
+          <button
+            onClick={handleSort}
+            className="bg-green-500 px-4 py-2 rounded text-white"
+          >
+            Sort by Price ({sortOrder === "asc" ? "Ascending" : "Descending"})
+          </button>
+        </div>
         <div className="overflow-x-auto">
           <table className="table text-center">
             {/* head */}
             <thead>
               <tr className="text-green-800 text-base">
-                <th>serial</th>
+                <th>Serial</th>
                 <th>Picture</th>
                 <th>Name</th>
                 <th>Category</th>
@@ -27,45 +42,25 @@ const AllSportsEquipments = () => {
               </tr>
             </thead>
             <tbody>
-
-              {
-                allEquipments.length === 0? <p>No data found</p>:
-                allEquipments.map((equipment,index) => <AllEquipmentTable key={equipment?._id} idx={index} equipment={equipment} allEquipments={allEquipments} setAllEquipments={setAllEquipments}></AllEquipmentTable>)
-              }
+              {allEquipments.length === 0 ? (
+                <p>No data found</p>
+              ) : (
+                allEquipments.map((equipment, index) => (
+                  <AllEquipmentTable
+                    key={equipment?._id}
+                    idx={index}
+                    equipment={equipment}
+                    allEquipments={allEquipments}
+                    setAllEquipments={setAllEquipments}
+                  />
+                ))
+              )}
             </tbody>
           </table>
         </div>
       </div>
-       </>
-    );
+    </>
+  );
 };
 
 export default AllSportsEquipments;
-
-
-// <tr>
-// <td>{idx+1}</td>
-// <td>{title}</td>
-// <td>{day}</td>
-// <td>{date}</td>
-// <td>{hour}</td>
-// <td>
-//   <div className="flex gap-4">
-//     {" "}
-//     <button onClick={() => handleDelete(_id)} className="bg-pink-500 px-4 py-2 rounded text-white">
-//       <FaTrash className=""></FaTrash>
-//     </button>
-//     <button className="bg-pink-500 px-4 py-2 rounded text-white">
-//       <Link to={`/update/${_id}`}>
-//         {" "}
-//         <FaFile />
-//       </Link>
-//     </button>
-//     <button onClick={()=> handleUpdateStatus(_id)} className="bg-pink-500 px-4 py-2 rounded text-white">
-//       {isCompleted ? <MdOutlineDoneAll /> : <MdDone />}
-
-      
-//     </button>
-//   </div>
-// </td>
-// </tr>
