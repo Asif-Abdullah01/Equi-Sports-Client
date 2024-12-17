@@ -41,7 +41,7 @@ const MyCard = ({ d, equipmentData, setEquipmentData }) => {
             }
         });
     }
-
+ 
     return (
         <div>
             <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
