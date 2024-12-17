@@ -170,7 +170,7 @@ const AddEquipment = () => {
                                 <input type="text" value={user.email}  className="input input-bordered w-full" />
                             </label>
                         </div>
-
+ 
                         <div className="form-control md:w-1/2 md:ml-4">
                             <label className="label ">
                                 <span className="label-text">User Name</span>
