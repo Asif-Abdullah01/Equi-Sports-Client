@@ -3,6 +3,10 @@ import Slider from '../Slider';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Card from '../Card';
+import SportsCategories from '../SportsCategories';
+import WhyChooseUs from '../WhyChooseUs';
+import TopBrands from '../TopBrands';
+import OurServices from '../OurServices';
 
 const Home = () => {
 
@@ -33,6 +37,11 @@ const Home = () => {
 
             {/* card section end */}
 
+
+            <SportsCategories></SportsCategories>
+            <WhyChooseUs></WhyChooseUs>
+            <OurServices></OurServices>
+            <TopBrands></TopBrands>
 
         </div>
     );

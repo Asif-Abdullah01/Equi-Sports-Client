@@ -4,6 +4,8 @@ import { Link, Navigate, useNavigate, useLocation } from 'react-router-dom';
 import { FaEyeSlash, FaGoogle, FaRegEye } from 'react-icons/fa';
 import auth from '../firebase.config';
 import { toast } from 'react-toastify';
+import lottieLogin from '../assets/lottieLogin.json'
+import Lottie from 'lottie-react';
 
 
 const Login = () => {
@@ -61,10 +63,9 @@ const Login = () => {
             <div className="hero bg-base-200 min-h-screen rounded-lg">
                 <div className="hero-content w-80 md:w-full flex-col lg:flex-row-reverse">
                     <div className="text-center md:text-left">
-                        <h1 className="text-2xl md:text-5xl font-bold text-green-700">Login now!</h1>
-                        <p className="w-full max-w-full py-6 text-green-800">
-                        Please enter your credentials to access your personalized career counseling dashboard. By logging in, you'll be able to explore tailored career guidance, track your progress, and access resources that can help you achieve your career goals.
-                        </p>
+                       <Lottie animationData={lottieLogin} loop={true}>
+                            
+                       </Lottie>
                     </div>
                     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         <form onSubmit={handleLoginForm} className="card-body">
