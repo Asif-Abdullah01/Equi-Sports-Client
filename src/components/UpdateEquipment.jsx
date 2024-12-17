@@ -30,7 +30,7 @@ const UpdateEquipment = () => {
         console.log(upDatedEquipment);
 
 
-        fetch(`http://localhost:5000/equipmentUpdate/${_id}`, {
+        fetch(`https://equi-sports-server-murex.vercel.app/equipmentUpdate/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

@@ -28,7 +28,7 @@ const AddEquipment = () => {
         console.log(newEquipment);
 
 
-        fetch('http://localhost:5000/equipments', {
+        fetch('https://equi-sports-server-murex.vercel.app/equipments', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

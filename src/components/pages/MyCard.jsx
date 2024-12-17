@@ -21,7 +21,7 @@ const MyCard = ({ d, equipmentData, setEquipmentData }) => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/equipmentDelete/${_id}`, {
+                fetch(`https://equi-sports-server-murex.vercel.app/equipmentDelete/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
