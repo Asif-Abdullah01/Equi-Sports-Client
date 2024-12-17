@@ -72,7 +72,7 @@ const AddEquipment = () => {
                             </label>
                         </div>
 
-                        <div className="form-control md:w-1/2 ml-4">
+                        <div className="form-control md:w-1/2 md:ml-4">
                             <label className="label ">
                                 <span className="label-text">Category Name</span>
                             </label>
@@ -94,7 +94,7 @@ const AddEquipment = () => {
                             </label>
                         </div>
 
-                        <div className="form-control md:w-1/2 ml-4">
+                        <div className="form-control md:w-1/2 md:ml-4">
                             <label className="label ">
                                 <span className="label-text">$ Price</span>
                             </label>
@@ -115,7 +115,7 @@ const AddEquipment = () => {
                             </label>
                         </div>
 
-                        <div className="form-control md:w-1/2 ml-4">
+                        <div className="form-control md:w-1/2 md:ml-4">
                             <label className="label ">
                                 <span className="label-text">Customization</span>
                             </label>
@@ -136,7 +136,7 @@ const AddEquipment = () => {
                             </label>
                         </div>
 
-                        <div className="form-control md:w-1/2 ml-4">
+                        <div className="form-control md:w-1/2 md:ml-4">
                             <label className="label ">
                                 <span className="label-text">Stock Status</span>
                             </label>
@@ -171,7 +171,7 @@ const AddEquipment = () => {
                             </label>
                         </div>
 
-                        <div className="form-control md:w-1/2 ml-4">
+                        <div className="form-control md:w-1/2 md:ml-4">
                             <label className="label ">
                                 <span className="label-text">User Name</span>
                             </label>

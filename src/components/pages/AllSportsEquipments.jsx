@@ -29,7 +29,7 @@ const AllSportsEquipments = () => {
         </div>
         <div className="overflow-x-auto">
           <table className="table text-center">
-            {/* head */}
+            
             <thead>
               <tr className="text-green-800 text-base">
                 <th>Serial</th>
@@ -46,12 +46,7 @@ const AllSportsEquipments = () => {
                 <p>No data found</p>
               ) : (
                 allEquipments.map((equipment, index) => (
-                  <AllEquipmentTable
-                    key={equipment?._id}
-                    idx={index}
-                    equipment={equipment}
-                    allEquipments={allEquipments}
-                    setAllEquipments={setAllEquipments}
+                  <AllEquipmentTable key={equipment?._id} idx={index} equipment={equipment} allEquipments={allEquipments} setAllEquipments={setAllEquipments}
                   />
                 ))
               )}
