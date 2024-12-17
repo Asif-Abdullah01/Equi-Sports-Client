@@ -58,8 +58,8 @@ const AddEquipment = () => {
                 <title>EquiSports | Add Equipment</title>
             </Helmet>
 
-            <div className='bg-[#F4F3F0] p-24'>
-                <h2 className='text-3xl font-extrabold'>Add an equipment</h2>
+            <div className='bg-green-100 p-20'>
+                <h2 className='text-3xl font-extrabold text-center mb-4'>Add an equipment</h2>
                 <form onSubmit={handleAddEquipment}>
                     {/* form name and quantity row */}
                     <div className='md:flex mb-6'>
@@ -96,10 +96,10 @@ const AddEquipment = () => {
 
                         <div className="form-control md:w-1/2 ml-4">
                             <label className="label ">
-                                <span className="label-text">Price</span>
+                                <span className="label-text">$ Price</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name='price' placeholder="$20" className="input input-bordered w-full" />
+                                <input type="text" name='price' placeholder="20" className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>

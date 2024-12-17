@@ -56,7 +56,7 @@ const WhyChooseUs = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-6'>
 
 
-                <div className='bg-green-300 p-4 rounded-lg flex flex-col justify-center items-center' data-aos="zoom-out-right">
+                <div className='bg-green-200 border-2 border-green-800 p-4 rounded-lg flex flex-col justify-center items-center' data-aos="zoom-out-right">
 
                     <div className='flex items-center gap-4'>
                         <div>
@@ -71,14 +71,14 @@ const WhyChooseUs = () => {
                         <div className='flex text-yellow-400 text-3xl'>
                             <FaStar></FaStar><FaStar></FaStar><FaStar></FaStar><FaStar></FaStar><FaStar></FaStar>
                         </div>
-                        <p className='text-center'>"I had no idea where to begin with my career path, but after a session with the team at Career Pathways, I felt like I had a clear direction. The advice was practical, and the resources they provided helped me get started. Highly recommended!"</p>
+                        <p className='text-center'>"I had no idea where to begin when looking for the right sports equipment, but after visiting EquiSports, I felt confident and well-informed. The staff provided practical advice, and their wide range of quality products helped me find exactly what I needed to get started. Highly recommended!"</p>
                     </div>
 
                 </div>
 
 
 
-                <div className='bg-green-300 p-4 rounded-lg flex flex-col justify-center items-center' data-aos="zoom-in">
+                <div className='bg-green-200 border-2 border-green-800 p-4 rounded-lg flex flex-col justify-center items-center' data-aos="zoom-in">
 
                     <div className='flex items-center gap-4'>
                         <div>
@@ -93,7 +93,7 @@ const WhyChooseUs = () => {
                         <div className='flex text-yellow-400 text-3xl'>
                             <FaStar></FaStar><FaStar></FaStar><FaStar></FaStar><FaStar></FaStar><FaStar></FaStar>
                         </div>
-                        <p className='text-center'>"The career counseling I received was a game-changer. They really took the time to understand my background and aspirations, then gave me a personalized roadmap. I'm already seeing progress in my job search!"</p>
+                        <p className='text-center'>"The service I received at EquiSports was a game-changer. They took the time to understand my needs and preferences, then guided me to the perfect sports gear. I’m already seeing an improvement in my performance!"</p>
                     </div>
 
                 </div>
@@ -101,7 +101,7 @@ const WhyChooseUs = () => {
 
 
 
-                <div className='bg-green-300 p-4 rounded-lg flex flex-col justify-center items-center' data-aos="zoom-out-left">
+                <div className='bg-green-200 border-2 border-green-800 p-4 rounded-lg flex flex-col justify-center items-center' data-aos="zoom-out-left">
 
                     <div className='flex items-center gap-4'>
                         <div>
@@ -116,12 +116,12 @@ const WhyChooseUs = () => {
                         <div className='flex text-yellow-400 text-3xl'>
                             <FaStar></FaStar><FaStar></FaStar><FaStar></FaStar><FaStar></FaStar><FaStar></FaStar>
                         </div>
-                        <p className='text-center'>"I was struggling to figure out my next move after college. The team at Career Pathways not only helped me identify my strengths but also provided tips for resume building and interviews. I'm feeling more confident about my future."</p>
+                        <p className='text-center'>"I was struggling to figure out which sports gear would suit me best. The team at EquiSports not only helped me identify the right equipment for my needs but also provided tips on maintenance and usage. I’m feeling more confident about my game now!"</p>
                     </div>
 
                 </div>
 
-                <div className='bg-green-300 p-4 rounded-lg flex flex-col justify-center items-center' data-aos="zoom-out-right">
+                <div className='bg-green-200 border-2 border-green-800 p-4 rounded-lg flex flex-col justify-center items-center' data-aos="zoom-out-right">
 
                     <div className='flex items-center gap-4'>
                         <div>
@@ -136,35 +136,36 @@ const WhyChooseUs = () => {
                         <div className='flex text-yellow-400 text-3xl'>
                             <FaStar></FaStar><FaStar></FaStar><FaStar></FaStar><FaStar></FaStar><FaStar></FaStar>
                         </div>
-                        <p className='text-center'>"The counselors here are amazing. They don’t just give generic advice, but tailor everything to your specific situation. I’ve already recommended this service to several friends!"</p>
+                        <p className='text-center'>"The team at EquiSports is amazing. They don’t just offer generic recommendations, but tailor everything to your specific needs. I’ve already recommended this store to several friends!"</p>
                     </div>
 
                 </div>
 
 
-                <div className='bg-green-300 p-4 rounded-lg flex flex-col justify-center items-center' data-aos="zoom-in">
+                <div className='bg-green-200 border-2 border-green-800 p-4 rounded-lg flex flex-col justify-center items-center' data-aos="zoom-in">
 
                     <div className='flex items-center gap-4'>
                         <div>
                             <img className='w-16 h-16 rounded-full' src={p5} alt="" />
                         </div>
                         <div>
-                            <h3 className='text-2xl'>Sadman Sakib</h3>
-                            <h4 className='text-base'>Graphic Designer</h4>
+                            <h3 className='text-2xl'>Arman Kohli</h3>
+                            <h4 className='text-base'>Sports Representative</h4>
                         </div>
                     </div>
                     <div className='flex flex-col justify-center items-center space-y-2 pt-2'>
                         <div className='flex text-yellow-400 text-3xl'>
                             <FaStar></FaStar><FaStar></FaStar><FaStar></FaStar><FaStar></FaStar><FaStar></FaStar>
                         </div>
-                        <p className='text-center'>"I’ve been to a few career counseling services, but none were as thorough and understanding as Career Pathways. They provided me with clear, actionable steps that have already made a difference in my job prospects."</p>
+                        <p className='text-center'>
+                        "I’ve visited a few sports shops, but none were as thorough and understanding as EquiSports. They provided me with clear, actionable advice on the best equipment for my needs, and it’s already made a difference in my performance."</p>
                     </div>
 
                 </div>
 
 
 
-                <div className='bg-green-300 p-4 rounded-lg flex flex-col justify-center items-center' data-aos="zoom-out-left">
+                <div className='bg-green-200 border-2 border-green-800 p-4 rounded-lg flex flex-col justify-center items-center' data-aos="zoom-out-left">
 
                     <div className='flex items-center gap-4'>
                         <div>
@@ -179,7 +180,7 @@ const WhyChooseUs = () => {
                         <div className='flex text-yellow-400 text-3xl'>
                             <FaStar></FaStar><FaStar></FaStar><FaStar></FaStar><FaStar></FaStar><FaStar></FaStar>
                         </div>
-                        <p className='text-center'>"I had no idea where to begin with my career path, but after a session with the team at Career Pathways, I felt like I had a clear direction. The advice was practical, and the resources they provided helped me get started. Highly recommended!"</p>
+                        <p className='text-center'>"I had no idea where to begin with my sports gear, but after visiting EquiSports, I felt like I had a clear direction. The advice was practical, and the products they recommended helped me get started. Highly recommended!"</p>
                     </div>
 
                 </div>
