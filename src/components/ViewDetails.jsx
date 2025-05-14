@@ -5,42 +5,61 @@ import { useLoaderData } from 'react-router-dom';
 
 const ViewDetails = () => {
     const data = useLoaderData();
-    const {name, category, description, price, rating, customization, processingTime, stock, photo} = data;
+    const { name, category, description, price, rating, customization, processingTime, stock, photo } = data;
 
     return (
-        <div>
-            <div className='flex flex-col justify-center items-center p-8 rounded-sm bg-green-300 w-9/12 mx-auto space-y-4'>
+        <div className="py-10 bg-green-50">
+            <div className="max-w-5xl mx-auto border-2 border-green-700 rounded-2xl shadow-lg bg-white px-4 md:px-6 py-8">
+                <div className="flex flex-col items-center space-y-8">
 
-                <img className='w-[70%] h-48 md:w-[80%] md:h-96 lg:h-auto rounded-t-xl' src={photo} alt="" />
-                <h2 className='md:text-2xl font-bold'>{name}</h2>
+                    {/* Larger Image */}
+                    <img
+                        className="w-5/6 md:w-3/4 lg:w-2/3 h-auto rounded-lg object-cover shadow-md"
+                        src={photo}
+                        alt={name}
+                    />
 
-                <div className='flex gap-4 items-center'>
-                    <p className='md:text-xl'>Consultancy Type: {category}</p>
-                    <p className='md:text-xl px-4 py-2 bg-lime-300 rounded-xl'>Cost: {price}</p>
-                </div>
+                    {/* Text content container matching image width */}
+                    <div className="w-5/6 md:w-3/4 lg:w-2/3 text-center space-y-4">
 
-                <p className='text-center w-full lg:w-10/12'>{description}</p>
-                <p className='font-bold text-center'>Customization: {customization}</p>
-                <div className='flex gap-2'>
-                <p className='font-bold border-2 p-2 border-green-900'>Delivery Time: {processingTime}</p>
+                        <h2 className="text-3xl font-bold text-green-700">{name}</h2>
 
-                <p className='font-bold border-2 p-2 border-green-900'>Stock Status: {stock}</p>
-                </div>
+                        <div className="flex flex-wrap justify-center gap-6 text-lg text-gray-800">
+                            <p><span className="font-semibold text-green-700">Category:</span> {category}</p>
+                            <p><span className="font-semibold text-green-700">Price:</span> ${price}</p>
+                        </div>
 
-                <div className="flex items-center">
-                    <Rating
-                        initialRating={Number(rating)}
-                        readonly={true}
-                        fullSymbol={<FaStar size={20} md:size={24} className='text-yellow-300'></FaStar>}
-                        emptySymbol={<FaStar size={20} md:size={24} color="gray"></FaStar>}
-                    ></Rating>
-                    <div className="ml-2">
-                        <p className="px-4 py-1 md:py-1.5 bg-lime-300 rounded-3xl">{rating}</p>
+                        <p className="text-gray-600 text-base leading-relaxed">
+                            {description}
+                        </p>
+
+                        <p className="font-medium text-gray-700">
+                            <span className="font-semibold text-black">Customer Wants </span> {customization}
+                        </p>
+                        <p className='text-black'>
+                            <span>Needs only</span> {processingTime} {processingTime == 1 ? 'day' : 'days'} to delivery
+                        </p>
+
+                        <div className="flex flex-wrap justify-center gap-8 text-base text-gray-700">
+
+                            <p>
+                                <span className="font-semibold text-green-700">Status:</span> {stock}
+                            </p>
+                        </div>
+
+                        <div className="flex items-center justify-center gap-2 mt-2">
+                            <Rating
+                                initialRating={Number(rating)}
+                                readonly={true}
+                                fullSymbol={<FaStar size={22} className="text-yellow-400" />}
+                                emptySymbol={<FaStar size={22} className="text-gray-300" />}
+                            />
+                            <span className="text-lg font-semibold text-gray-800">{rating}</span>
+                        </div>
+
                     </div>
                 </div>
-
             </div>
-
         </div>
     );
 };

@@ -14,13 +14,16 @@ import AddEquipment from "../components/pages/AddEquipment";
 import MyEquipments from "../components/pages/MyEquipments";
 import ViewDetails from "../components/ViewDetails";
 import UpdateEquipment from "../components/UpdateEquipment";
+import DashboardLayout from "../components/Dashboard/DashboardLayout";
+import DashboardOverview from "../components/Dashboard/DashboardOverview";
+import Profile from "../components/Dashboard/Profile";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <MainLayout></MainLayout>,
         errorElement: <Error></Error>,
-        children:[
+        children: [
             {
                 path: '/',
                 element: <Home></Home>,
@@ -33,36 +36,56 @@ const router = createBrowserRouter([
             },
             {
                 path: '/addEquipment',
-                element: <PrivateRoute><AddEquipment></AddEquipment></PrivateRoute>
+                element: <PrivateRoute><AddEquipment /></PrivateRoute>
             },
             {
                 path: '/myEquipments',
-                element:<PrivateRoute><MyEquipments></MyEquipments> </PrivateRoute>,
-       
+                element: <PrivateRoute><MyEquipments /></PrivateRoute>
             },
             {
                 path: '/equipmentUpdate/:id',
-                element:<PrivateRoute><UpdateEquipment></UpdateEquipment> </PrivateRoute>,
-                loader: ({params}) => fetch(`https://equi-sports-server-murex.vercel.app/equipmentUpdate/${params.id}`)
-       
-            },
-            {
-                path: '/login',
-                element: <Login></Login>
-            },
-            {
-                path: '/register',
-                element: <Register></Register>
-            },
-            {
-                path: '/forgetPass',
-                element: <ForgetPass></ForgetPass>
+                element: <PrivateRoute><UpdateEquipment /></PrivateRoute>,
+                loader: ({ params }) => fetch(`https://equi-sports-server-murex.vercel.app/equipmentUpdate/${params.id}`)
             },
             {
                 path: '/details/:id',
-                element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-                loader: ({params}) => fetch(`https://equi-sports-server-murex.vercel.app/equipments/${params.id}`)
+                element: <PrivateRoute><ViewDetails /></PrivateRoute>,
+                loader: ({ params }) => fetch(`https://equi-sports-server-murex.vercel.app/equipments/${params.id}`)
             },
+            {
+                path: '/login',
+                element: <Login />
+            },
+            {
+                path: '/register',
+                element: <Register />
+            },
+            {
+                path: '/forgetPass',
+                element: <ForgetPass />
+            },
+            {
+                path: '/dashboard',
+                element: <PrivateRoute><DashboardLayout /></PrivateRoute>,
+                children: [
+                    {
+                        path: 'overview',
+                        element: <DashboardOverview />
+                    },
+                    {
+                        path: 'profile',
+                        element: <Profile />
+                    },
+                    {
+                        path: 'addEquipment',
+                        element: <AddEquipment />
+                    },
+                    {
+                        path: 'myEquipments',
+                        element: <MyEquipments />
+                    }
+                ]
+            }
         ]
     },
 ]);

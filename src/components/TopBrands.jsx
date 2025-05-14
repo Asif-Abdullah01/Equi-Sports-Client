@@ -16,7 +16,7 @@ const TopBrands = () => {
         {/* Nike */}
         <div className="flex flex-col items-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition">
           <SiNike size={60} className="text-emerald-600 mb-4" />
-          <h3 className="text-xl font-semibold ">Nike</h3>
+          <h3 className="text-xl font-semibold text-gray-700">Nike</h3>
         </div>
 
         {/* Adidas */}

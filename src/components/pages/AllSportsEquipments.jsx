@@ -16,45 +16,55 @@ const AllSportsEquipments = () => {
   };
 
   return (
-    <>
-      <div className="w-9/12 mx-auto bg-green-100 text-black">
-        <div className="flex justify-between items-center my-4">
-          <h2 className="text-2xl font-bold">All Sports Equipments</h2>
-          <button
-            onClick={handleSort}
-            className="bg-green-500 px-4 py-2 rounded text-white"
-          >
-            Sort by Price ({sortOrder === "asc" ? "Ascending" : "Descending"})
-          </button>
+    <div className="min-h-screen bg-green-50 py-10 px-4">
+      <div className="max-w-6xl mx-auto bg-white border border-green-700 rounded-xl shadow-lg p-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+          <h2 className="text-2xl font-bold text-green-700">All Sports Equipments</h2>
+          
+          {/* Sort Button with Border on Left */}
+          <div className="pl-4 border-l-4 border-green-600">
+            <button
+              onClick={handleSort}
+              className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition font-medium"
+            >
+              Sort by Price ({sortOrder === "asc" ? "Ascending" : "Descending"})
+            </button>
+          </div>
         </div>
-        <div className="overflow-x-auto">
-          <table className="table text-center">
-            
-            <thead>
-              <tr className="text-green-800 text-base">
-                <th>Serial</th>
-                <th>Picture</th>
-                <th>Name</th>
-                <th>Category</th>
-                <th>Price</th>
-                <th>Stock Status</th>
-                <th>Details</th>
-              </tr>
-            </thead>
-            <tbody>
-              {allEquipments.length === 0 ? (
-                <p>No data found</p>
-              ) : (
-                allEquipments.map((equipment, index) => (
-                  <AllEquipmentTable key={equipment?._id} idx={index} equipment={equipment} allEquipments={allEquipments} setAllEquipments={setAllEquipments}
+
+        {/* Conditional Message */}
+        {allEquipments.length === 0 ? (
+          <div className="text-center text-gray-600 py-10 text-lg">No equipment found.</div>
+        ) : (
+          <div className="overflow-x-auto rounded-lg">
+            <table className="min-w-full text-sm md:text-base table-auto border">
+              <thead className="bg-green-100 text-green-800">
+                <tr>
+                  <th className="px-4 py-3 text-left">Serial</th>
+                  <th className="px-4 py-3 text-left">Picture</th>
+                  <th className="px-4 py-3 text-left">Name</th>
+                  <th className="px-4 py-3 text-left">Category</th>
+                  <th className="px-4 py-3 text-left">Price</th>
+                  <th className="px-4 py-3 text-left">Stock</th>
+                  <th className="px-4 py-3 text-left">Details</th>
+                </tr>
+              </thead>
+              <tbody className="text-gray-700">
+                {allEquipments.map((equipment, index) => (
+                  <AllEquipmentTable
+                    key={equipment?._id}
+                    idx={index}
+                    equipment={equipment}
+                    allEquipments={allEquipments}
+                    setAllEquipments={setAllEquipments}
                   />
-                ))
-              )}
-            </tbody>
-          </table>
-        </div>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
       </div>
-    </>
+    </div>
   );
 };
 

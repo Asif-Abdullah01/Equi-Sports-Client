@@ -14,7 +14,7 @@ const Slider = () => {
                         src={b3}
                         className="w-full h-auto object-cover" />
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between z-20">
-                        <a href="#slide3" className="btn btn-circle bg-transparent text-4xl">❮</a>
+                        <a href="#slide3" className="btn btn-circle bg-transparent text-4xl text-white hover:text-gray-300">❮</a>
                         <button id="sportStore" className=" btn mt-4 border-none bg-green-600 text-white py-2 px-4 rounded hover:bg-green-800 transition-colors">
                             Sports Store
                         </button>
@@ -23,7 +23,7 @@ const Slider = () => {
                             content="Your All in one Sports Solution"
                         />
 
-                        <a href="#slide2" className="btn btn-circle bg-transparent text-4xl">❯</a>
+                        <a href="#slide2" className="btn btn-circle bg-transparent text-4xl text-white hover:text-gray-300">❯</a>
                     </div>
                 </div>
                 <div id="slide2" className="carousel-item relative w-full">
@@ -31,7 +31,7 @@ const Slider = () => {
                         src={b2}
                         className="w-full h-auto object-cover" />
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                        <a href="#slide1" className="btn btn-circle bg-transparent text-4xl">❮</a>
+                        <a href="#slide1" className="btn btn-circle bg-transparent text-4xl text-white hover:text-gray-300">❮</a>
                         <button id="sportStore" className=" btn mt-4 border-none bg-green-600 text-white py-2 px-4 rounded hover:bg-green-800 transition-colors">
                             Sports Store
                         </button>
@@ -39,7 +39,7 @@ const Slider = () => {
                             anchorSelect="#sportStore"
                             content="Just One Click Away!"
                         />
-                        <a href="#slide3" className="btn btn-circle bg-transparent text-4xl">❯</a>
+                        <a href="#slide3" className="btn btn-circle bg-transparent text-4xl text-white hover:text-gray-300">❯</a>
                     </div>
                 </div>
                 <div id="slide3" className="carousel-item relative w-full">
@@ -47,7 +47,7 @@ const Slider = () => {
                         src={b1}
                         className="w-full h-auto object-cover" />
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                        <a href="#slide2" className="btn btn-circle bg-transparent text-4xl">❮</a>
+                        <a href="#slide2" className="btn btn-circle bg-transparent text-4xl text-white hover:text-gray-300">❮</a>
                         <button id="sportStore" className=" btn mt-4 border-none bg-green-600 text-white py-2 px-4 rounded hover:bg-green-800 transition-colors">
                             Sports Store
                         </button>
@@ -55,7 +55,7 @@ const Slider = () => {
                             anchorSelect="#sportStore"
                             content="Ensuring the Best Goods"
                         />
-                        <a href="#slide1" className="btn btn-circle bg-transparent text-4xl">❯</a>
+                        <a href="#slide1" className="btn btn-circle bg-transparent text-4xl text-white hover:text-gray-300">❯</a>
                     </div>
                 </div>
 
