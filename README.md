@@ -76,16 +76,18 @@ EquiSports is an e-commerce platform where customers can:
 
 ### Clone the Repositories
 
-```bash
-# Client
+1. # Client
 git clone https://github.com/your-username/equisports-client.git
 
-# Server
+2. # Server
 git clone https://github.com/your-username/equisports-server.git
 
-- npm i
-- setup .env file
+3. npm i
+4. setup .env file
 
-![image](https://github.com/user-attachments/assets/7ebe4dfc-4f52-4a33-9739-335067050251)
+
+![image](https://github.com/user-attachments/assets/7a95007b-6849-468d-9e26-83ba03e14723)
+
+
 
 
